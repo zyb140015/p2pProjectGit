@@ -1,0 +1,136 @@
+@color: #fff;
+@colorblue: #2e8ece;
+@bcimg: "../../static/images/";
+//头导航栏
+.navbar {
+    border-radius: 0px;
+    margin-bottom: 0px;
+}
+
+.navbar-inverse {
+    .navbar-brand {
+        color: @color;
+        font-size: 26px;
+        span {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+    }
+    .navbar-nav {
+        &>li {
+            &>a {
+                color: @color;
+                &:hover {
+                    color: @colorblue;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+//主导航
+.navbar-default {
+    .navbar-nav {
+        &>li {
+            &>a {
+                line-height: 40px;
+                min-width: 80px;
+                font-size: 16px;
+                text-align: center;
+                &:hover {
+                    background-color: #f0f0f0;
+                }
+            }
+        }
+    }
+}
+
+//三大特色
+#show {
+    .row {
+        div {
+            background: url("@{bcimg}feature01.png") no-repeat left center;
+            min-height: 65px;
+            padding-left: 80px;
+            h4 {
+                font-weight: bold;
+            }
+            &:nth-of-type(2) {
+                background-image: url("@{bcimg}feature02.png");
+            }
+            &：nth-of-type(3) {
+                background-image: url("@{bcimg}feature03.png");
+            }
+        }
+    }
+}
+
+//投资列表
+#invest,
+#article {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+//公共的panel
+.panel {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.panel-default {
+    border: none;
+    &>.panel-heading {
+        background-color: transparent;
+        padding: 0px;
+        display: flex;
+        justify-content: space-between;
+        h1 {
+            font-size: 24px;
+            margin-bottom: 0px;
+            padding-bottom: 10px;
+            color: @colorblue;
+            font-weight: bold;
+            border-bottom: 3px solid @colorblue;
+        }
+        p {
+            margin: 0px;
+            padding: 0px;
+            line-height: 60px;
+        }
+    }
+    .panel-body {
+        ul {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+            li {
+                line-height: 26px;
+                border-bottom: dotted 1px #ccc;
+                span {
+                    float: right;
+                    color: #999;
+                }
+            }
+        }
+    }
+}
+//尾部
+#footer{
+    .row{
+        padding-top: 30px;
+        div:nth-of-type(2){
+            img{
+                height: 65.88px;
+                width: 160px;
+            }
+        }
+         div:nth-of-type(3){
+            img{
+               height: 160px;
+               width: 160px;
+            }
+        }
+    }
+}

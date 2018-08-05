@@ -2,7 +2,7 @@
 var gulp=require("gulp");
 //引入第三方模块
 var less=require("gulp-less");
-var sass = require('gulp-sass');
+//var sass = require('gulp-sass');
 var path=require("path");
 var cleanCSS=require("gulp-clean-css");
 var rename=require("gulp-rename");
@@ -18,12 +18,12 @@ gulp.task("lessTask",function () {
 	.pipe(gulp.dest("dist/css")); //输出目录
 });
 
-//配置sass编译任务
-gulp.task("sassTask",function () {
-	gulp.src("src/sass/*.scss") //源目录
-	.pipe(sass().on('error', sass.logError))
-	.pipe(gulp.dest("dist/css")); //输出目录
-});
+////配置sass编译任务
+//gulp.task("sassTask",function () {
+//	gulp.src("src/sass/*.scss") //源目录
+//	.pipe(sass().on('error', sass.logError))
+//	.pipe(gulp.dest("dist/css")); //输出目录
+//});
 
 //配置压缩css的任务
 gulp.task("minCssTask",function () {
@@ -32,7 +32,7 @@ gulp.task("minCssTask",function () {
 	.pipe(rename({
 		suffix:".min" //重命名加min后缀
 	}))
-	.pipe(gulp.dest("dist/css/")); //输出目录
+	.pipe(gulp.dest("dist/css/min")); //输出目录
 });
 
 //配置js压缩的任务
